@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Global Transfer Bank — Démonstration</title>
+<style>
+:root{--bg:#0b0b0c;--panel:#151515;--panel2:#1d1b17;--gold:#d5b15e;--gold2:#f0d58d;--muted:#a9a397;--line:#393329;--white:#f7f4ec;--red:#e28b82;--green:#9bc79d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font:15px/1.5 Inter,system-ui,-apple-system,Segoe UI,sans-serif}
+button,input,select{font:inherit}button{cursor:pointer}.shell{display:flex;min-height:100vh}.sidebar{width:250px;background:#101010;border-right:1px solid var(--line);padding:24px 16px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:11px;color:var(--gold2);font-weight:800;letter-spacing:.08em}.brandmark{width:42px;height:42px;border:1px solid var(--gold);border-radius:12px;display:grid;place-items:center;font-size:22px}.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.18em}.nav{display:grid;gap:7px}.nav button{background:none;border:0;color:#c9c3b6;text-align:left;padding:12px;border-radius:10px}.nav button.active,.nav button:hover{background:#282319;color:var(--gold2)}.side-note{margin-top:auto;color:var(--muted);font-size:11px}.main{flex:1;min-width:0}.top{height:76px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 34px}.top span{color:var(--muted)}.content{max-width:1150px;margin:auto;padding:32px}.notice{border:1px solid #806a35;background:#241e10;color:#f3d98f;border-radius:10px;padding:11px 14px;font-size:13px;margin-bottom:24px}.eyebrow{color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.title{font-size:30px;margin:4px 0 4px}.sub{color:var(--muted);margin:0 0 25px}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.card{background:linear-gradient(145deg,#1b1a17,#141414);border:1px solid var(--line);border-radius:16px;padding:20px}.span8{grid-column:span 8}.span4{grid-column:span 4}.span6{grid-column:span 6}.span12{grid-column:span 12}.balance{font-size:34px;color:var(--gold2);font-weight:750;letter-spacing:.02em;margin:10px 0}.muted{color:var(--muted)}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:1px solid var(--gold);border-radius:9px;padding:10px 15px;background:var(--gold);color:#17130a;font-weight:700}.btn.ghost{background:transparent;color:var(--gold2)}.btn.subtle{border-color:var(--line);background:#24221e;color:var(--white)}.metric{font-size:24px;color:var(--gold2);font-weight:700;margin-top:8px}label{display:block;color:#d7d0c2;font-size:13px;margin:13px 0 6px}input,select{width:100%;background:#0f0f0f;color:var(--white);border:1px solid #494237;border-radius:9px;padding:12px;outline:none}input:focus,select:focus{border-color:var(--gold)}.formrow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:520px}th,td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted);font-weight:600}.pill{display:inline-block;border:1px solid #776338;color:var(--gold2);border-radius:30px;padding:3px 9px;font-size:11px}.empty{color:var(--muted);padding:20px 0}.hidden{display:none!important}.mail{background:#f4f1e9;color:#24211b;border-radius:12px;padding:22px;max-width:650px}.mail .mailbrand{color:#8b6a24;font-weight:800;letter-spacing:.1em}.mail p{color:#4c473e}.foot{font-size:11px;color:#8b8579;margin-top:20px}.mobilebar{display:none}
+@media(max-width:800px){.shell{display:block}.sidebar{width:auto;padding:12px 14px;border-right:0;border-bottom:1px solid var(--line)}.sidebar .nav{display:flex;overflow:auto;gap:4px}.nav button{white-space:nowrap;padding:9px 11px;font-size:12px}.side-note{display:none}.top{height:58px;padding:0 18px}.content{padding:22px 16px}.span8,.span4,.span6{grid-column:span 12}.title{font-size:25px}.balance{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brandmark">✦</div><div>GLOBAL TRANSFER<small>BANK · CONCEPT</small></div></div>
+  <nav class="nav" id="nav">
+    <button class="active" data-page="home">⌂ &nbsp; Accueil</button>
+    <button data-page="dashboard">▦ &nbsp; Tableau de bord</button>
+    <button data-page="transfer">⇄ &nbsp; Virements</button>
+    <button data-page="beneficiaries">♙ &nbsp; Bénéficiaires</button>
+    <button data-page="history">◷ &nbsp; Historique</button>
+    <button data-page="email">✉ &nbsp; E-mail de démonstration</button>
+    <button data-page="access">◎ &nbsp; Accès démo</button>
+  </nav>
+  <div class="side-note">Prototype indépendant à des fins de conception.<br>Aucun service bancaire réel n'est fourni.</div>
+</aside>
+<main class="main">
+<header class="top"><strong id="topTitle">Accueil</strong><span>FR · <b style="color:var(--gold2)">MODE DÉMO</b></span></header>
+<div class="content">
+<div class="notice"><strong>DÉMONSTRATION — AUCUN FONDS TRANSFÉRÉ</strong><br>GTB est un prototype de conception, pas une banque agréée. N'entrez aucune donnée bancaire ni aucun mot de passe réel.</div>
+
+<section id="home" class="page">
+<div class="eyebrow">Global banking concept</div><h1 class="title">La banque, sans frontières.</h1><p class="sub">Une interface de gestion de transferts pensée pour une expérience claire, élégante et internationale.</p>
+<div class="grid">
+ <div class="card span8"><div class="eyebrow">Bienvenue chez GTB</div><h2 style="font-size:25px;margin:10px 0">Votre espace de transfert, en toute simplicité.</h2><p class="muted">Explorez les écrans de démonstration, testez les formulaires fictifs et visualisez un exemple de notification e-mail.</p><div class="actions"><button class="btn" onclick="go('dashboard')">Explorer le tableau de bord</button><button class="btn ghost" onclick="go('transfer')">Tester un transfert fictif</button></div></div>
+ <div class="card span4"><div class="eyebrow">Identité</div><div class="balance" style="font-size:25px">GTB</div><p class="muted">Noir profond · Or champagne · Typographie sobre</p><span class="pill">Prototype interactif</span></div>
+ <div class="card span6"><h3>Transferts nationaux</h3><p class="muted">Parcours de saisie fictif, sans connexion bancaire.</p><button class="btn ghost" onclick="go('transfer')">Ouvrir le formulaire</button></div>
+ <div class="card span6"><h3>Transferts internationaux</h3><p class="muted">Aperçu des champs pays, devise et coordonnées fictives.</p><button class="btn ghost" onclick="go('transfer')">Découvrir</button></div>
+</div></section>
+
+<section id="dashboard" class="page hidden">
+<div class="eyebrow">Vue d'ensemble</div><h1 class="title">Tableau de bord</h1><p class="sub">Données d'exemple uniquement — aucun compte ni solde réel.</p>
+<div class="grid">
+ <div class="card span8"><div class="eyebrow">Solde de démonstration</div><div class="balance">— — —</div><p class="muted">Aucun solde bancaire n'est connecté à ce prototype.</p><div class="actions"><button class="btn" onclick="go('transfer')">Nouveau transfert fictif</button><button class="btn ghost" onclick="go('history')">Voir l'activité</button></div></div>
+ <div class="card span4"><div class="eyebrow">Activité simulée</div><div class="metric" id="count">0</div><div class="muted">simulation(s) créée(s) dans cette session</div></div>
+ <div class="card span6"><div class="eyebrow">Raccourcis</div><p>Gérer les destinataires et consulter les simulations.</p><button class="btn subtle" onclick="go('beneficiaries')">Bénéficiaires</button></div>
+ <div class="card span6"><div class="eyebrow">Notifications</div><p>Prévisualiser le modèle d'e-mail sans envoi.</p><button class="btn subtle" onclick="go('email')">Voir l'e-mail</button></div>
+</div></section>
+
+<section id="transfer" class="page hidden">
+<div class="eyebrow">Simulation uniquement</div><h1 class="title">Nouveau transfert</h1><p class="sub">Les informations saisies restent dans cette page et ne sont envoyées à aucun service.</p>
+<div class="card">
+<form id="transferForm">
+ <div class="formrow"><div><label>Type de transfert</label><select id="kind"><option>National</option><option>International</option></select></div><div><label>Devise (exemple)</label><select id="currency"><option>USD</option><option>EUR</option><option>XOF</option><option>GBP</option></select></div></div>
+ <div class="formrow"><div><label>Nom fictif du bénéficiaire</label><input id="recipient" placeholder="Ex. Alex Martin" required></div><div><label>E-mail de démonstration (facultatif)</label><input id="recipientEmail" type="email" placeholder="exemple@demo.test"></div></div>
+ <div class="formrow"><div><label>Montant fictif</label><input id="amount" type="number" min="1" step="0.01" placeholder="250.00" required></div><div><label>Pays de destination</label><input id="country" placeholder="Ex. Bénin"></div></div>
+ <label>Note (facultative)</label><input id="memo" placeholder="Motif fictif du transfert">
+ <p class="muted" style="font-size:12px">Ne saisissez aucun IBAN, numéro de carte, mot de passe ou donnée personnelle réelle.</p>
+ <div class="actions" style="margin-top:18px"><button class="btn" type="submit">Créer une simulation</button><button class="btn ghost" type="reset">Effacer</button></div>
+</form><div id="result" class="notice hidden" style="margin:18px 0 0"></div>
+</div></section>
+
+<section id="beneficiaries" class="page hidden">
+<div class="eyebrow">Carnet de démonstration</div><h1 class="title">Bénéficiaires</h1><p class="sub">Exemples fictifs créés localement pendant cette session.</p>
+<div class="card"><div class="formrow"><div><label>Nom fictif</label><input id="bname" placeholder="Nom du bénéficiaire"></div><div><label>Pays</label><input id="bcountry" placeholder="Pays"></div></div><button class="btn" style="margin-top:14px" onclick="addBeneficiary()">Ajouter à la démo</button><div id="beneficiaryList" class="empty">Aucun bénéficiaire ajouté.</div></div>
+</section>
+
+<section id="history" class="page hidden">
+<div class="eyebrow">Journal local</div><h1 class="title">Historique des simulations</h1><p class="sub">Les statuts ci-dessous sont des états de démonstration et ne représentent pas un paiement.</p>
+<div class="card tablewrap"><table><thead><tr><th>Référence démo</th><th>Bénéficiaire</th><th>Montant fictif</th><th>Type</th><th>Statut démo</th></tr></thead><tbody id="historyRows"><tr><td colspan="5" class="empty">Aucune simulation pour le moment.</td></tr></tbody></table></div>
+</section>
+
+<section id="email" class="page hidden">
+<div class="eyebrow">Aperçu uniquement · aucun envoi</div><h1 class="title">Notification e-mail</h1><p class="sub">Modèle de message à adapter à une intégration légitime. Cet aperçu n'est pas une confirmation bancaire.</p>
+<div class="mail"><div class="mailbrand">GLOBAL TRANSFER BANK · CONCEPT</div><hr style="border:0;border-top:1px solid #d7d0c2;margin:16px 0"><b>Objet : Exemple de notification — démonstration GTB</b><p>Bonjour,</p><p>Ceci est un aperçu de notification généré dans un prototype de conception. Aucune opération bancaire n'a été effectuée et aucun fonds n'a été transféré.</p><p><b>Type :</b> Simulation uniquement<br><b>Référence :</b> DEMO-EXEMPLE<br><b>Statut :</b> Démonstration — non payable</p><p>Ce message ne constitue ni une preuve de paiement ni une confirmation de réception de fonds.</p><p>Cordialement,<br>Équipe de conception GTB</p><div class="foot">Prototype indépendant · aucune banque agréée n'est représentée.</div></div>
+</section>
+
+<section id="access" class="page hidden">
+<div class="eyebrow">Parcours fictif</div><h1 class="title">Accès à l'espace démo</h1><p class="sub">Aucune authentification réelle n'est mise en place. N'utilisez aucun mot de passe.</p>
+<div class="card" style="max-width:520px"><label>Nom d'affichage fictif</label><input id="demoName" placeholder="Votre nom de démonstration"><label>E-mail fictif (facultatif)</label><input id="demoEmail" type="email" placeholder="nom@demo.test"><button class="btn" style="margin-top:18px" onclick="demoLogin()">Entrer dans la démonstration</button><p id="loginMsg" class="muted"></p></div>
+</section>
+<div class="foot">© GTB — Concept de démonstration. Aucun service bancaire, transfert ou envoi d'e-mail réel.</div>
+</div></main></div>
+<script>
+const titles={home:"Accueil",dashboard:"Tableau de bord",transfer:"Virements",beneficiaries:"Bénéficiaires",history:"Historique",email:"Aperçu e-mail",access:"Accès démo"};
+let transactions=[],beneficiaries=[];
+function go(page){document.querySelectorAll('.page').forEach(x=>x.classList.add('hidden'));document.getElementById(page).classList.remove('hidden');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));document.getElementById('topTitle').textContent=titles[page];if(page==='history')renderHistory();if(page==='beneficiaries')renderBeneficiaries();window.scrollTo({top:0,behavior:'smooth'});}
+document.getElementById('nav').addEventListener('click',e=>{let b=e.target.closest('button[data-page]');if(b)go(b.dataset.page)});
+document.getElementById('transferForm').addEventListener('submit',e=>{e.preventDefault();let t={ref:'DEMO-'+String(transactions.length+1).padStart(4,'0'),name:recipient.value.trim(),amount:Number(amount.value).toFixed(2),currency:currency.value,kind:kind.value,status:'Simulation créée'};transactions.unshift(t);document.getElementById('result').classList.remove('hidden');document.getElementById('result').innerHTML='<b>Simulation enregistrée localement.</b><br>Référence : '+t.ref+' · '+t.amount+' '+t.currency+'<br><b>Aucun fonds transféré. Ce statut ne confirme aucun paiement.</b>';document.getElementById('count').textContent=transactions.length;});
+function renderHistory(){let el=document.getElementById('historyRows');el.innerHTML=transactions.length?transactions.map(t=>`<tr><td>${t.ref}</td><td>${escapeHtml(t.name)}</td><td>${t.amount} ${t.currency}</td><td>${t.kind}</td><td><span class="pill">${t.status}</span></td></tr>`).join(''):'<tr><td colspan="5" class="empty">Aucune simulation pour le moment.</td></tr>';}
+function addBeneficiary(){let n=document.getElementById('bname').value.trim(),c=document.getElementById('bcountry').value.trim();if(!n)return alert('Ajoutez un nom fictif.');beneficiaries.push({n,c});document.getElementById('bname').value='';document.getElementById('bcountry').value='';renderBeneficiaries();}
+function renderBeneficiaries(){let el=document.getElementById('beneficiaryList');el.innerHTML=beneficiaries.length?'<ul>'+beneficiaries.map(b=>'<li>'+escapeHtml(b.n)+' — '+escapeHtml(b.c||'Pays non précisé')+'</li>').join('')+'</ul>':'Aucun bénéficiaire ajouté.';}
+function demoLogin(){let n=document.getElementById('demoName').value.trim()||'Visiteur';document.getElementById('loginMsg').textContent='Bienvenue, '+n+' — session de démonstration uniquement.';}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+</script>
+</body></html>
